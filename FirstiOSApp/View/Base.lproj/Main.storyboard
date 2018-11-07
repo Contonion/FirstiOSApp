@@ -13,35 +13,63 @@
         <!--Color Change View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ColorChangeViewController" customModule="FirstiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Color">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBj-cf-tVA">
-                                <rect key="frame" x="148" y="229" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click me :D"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBj-cf-tVA">
+                                <rect key="frame" x="121" y="229" width="132" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Click me :D">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.9481443006604664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="colorClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpS-tf-miA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sup mah Boy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODs-h0-MGM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sup mah Boy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODs-h0-MGM">
                                 <rect key="frame" x="137" y="157" width="101" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-K3-JNr">
+                                <rect key="frame" x="127" y="83" width="121" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="ASd-Tr-md3"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VnN-yZ-ton">
+                                <rect key="frame" x="128" y="387" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="SXy-LW-MvV"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VnN-yZ-ton" secondAttribute="bottom" constant="251" id="2J8-1I-tVG"/>
+                            <constraint firstItem="9Et-K3-JNr" firstAttribute="centerX" secondItem="ODs-h0-MGM" secondAttribute="centerX" id="2gA-Vs-dnq"/>
+                            <constraint firstItem="ODs-h0-MGM" firstAttribute="top" secondItem="9Et-K3-JNr" secondAttribute="bottom" constant="47" id="4YD-oI-grz"/>
+                            <constraint firstItem="VnN-yZ-ton" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="BY1-IT-VoN"/>
+                            <constraint firstItem="aBj-cf-tVA" firstAttribute="centerX" secondItem="VnN-yZ-ton" secondAttribute="centerX" id="HeK-8h-GBB"/>
+                            <constraint firstItem="aBj-cf-tVA" firstAttribute="top" secondItem="ODs-h0-MGM" secondAttribute="bottom" constant="51" id="Mr4-rb-OB5"/>
+                            <constraint firstItem="9Et-K3-JNr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="kxI-GB-Nb2"/>
+                            <constraint firstItem="aBj-cf-tVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="prs-wE-Xzg"/>
+                            <constraint firstItem="ODs-h0-MGM" firstAttribute="centerX" secondItem="aBj-cf-tVA" secondAttribute="centerX" id="xRd-Aa-HUi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="firstButton" destination="aBj-cf-tVA" id="CTB-jx-xBl"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
